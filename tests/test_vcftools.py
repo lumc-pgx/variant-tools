@@ -17,9 +17,7 @@ def acdict():
 
 
 def test_accession_dict(vcf):
-    assert vcf_tools.generate_accession_dict(vcf) == {
-        "chr1": "NC_000001.10"
-    }
+    assert vcf_tools.generate_accession_dict(vcf)["chr1"] == "NC_000001.10"
 
 
 def test_vcf_to_hgvs(vcf, acdict):
